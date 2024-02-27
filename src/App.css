@@ -116,6 +116,12 @@ button.darkMode {
     font-weight: bold;
 }
 
+.word span {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
+
 .highlight-base {
     color: #3f51b5;
     background-color: #e3f2fd;
@@ -124,10 +130,10 @@ button.darkMode {
 }
 
 .highlight-word {
-    color: #d81b60;
     background-color: #e3f2fd;
     border-radius: 3px;
-    padding: 0 1px;
+    padding: 1px;
+    color: #854d4d;
 }
 
 .highlight-word > .highlight-base {
@@ -141,8 +147,8 @@ button.darkMode {
 }
 
 .dark .highlight-word {
-    background-color: #263238;
-    color: #d75454;
+    background-color: #374362;
+    color: unset;
 }
 
 .word_box {

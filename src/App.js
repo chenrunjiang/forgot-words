@@ -128,6 +128,48 @@ const highlightWord = (word, words, baseWords) => {
     return elements;
 };
 
+function expandString(str) {
+    let result = [];
+
+    // 正则表达式匹配最内层的括号
+    const regex = /\(([^()]+)\)/;
+    let match = regex.exec(str);
+
+    // 如果存在括号
+    if (match) {
+        // 括号内的内容
+        const inside = match[1];
+
+        // 括号外的内容，拆分为前后两部分
+        const before = str.substring(0, match.index);
+        const after = str.substring(match.index + inside.length + 2);
+
+        // 不包含当前括号内容的字符串
+        result = result.concat(expandString(before + after));
+
+        // 包含当前括号内容的字符串
+        result = result.concat(expandString(before + inside + after));
+    } else {
+        // 如果没有括号，直接添加到结果中
+        result.push(str);
+    }
+
+    return result;
+}
+
+function expandArrayWithParentheses(arr) {
+    let result = [];
+
+    arr.forEach(item => {
+        // 对每个字符串进行展开
+        result = result.concat(expandString(item));
+    });
+
+    // 使用 Set 去除重复项
+    result = [...new Set(result)];
+
+    return result;
+}
 
 
 function App() {
@@ -156,7 +198,7 @@ function App() {
     const { root, data } = wordsData[currentPage] || { root: '', data: [] };
 
     // 从root中取出|前面的数据，并分割成数组
-    const baseWords = root.split('|')[0].split(',');
+    const baseWords = expandArrayWithParentheses(root.split('|')[0].split(','));
 
     const words = data.map(word => word[0]);
 
@@ -166,6 +208,28 @@ function App() {
 
         const word = data[wordIndex];
         if (word) playAudio(word[0]);
+    }
+
+    const scrollWord = () => {
+        const container = document.querySelector('#table-box');
+        const element = document.querySelector('#word-' + config.wordIndex);
+
+        if (container && element) {
+            const containerRect = container.getBoundingClientRect();
+            const elementRect = element.getBoundingClientRect();
+
+            const scrollTop = element.offsetTop - container.offsetTop - (containerRect.height / 2) + (elementRect.height / 2);
+
+            const scroll = elementRect.top >= containerRect.top &&
+                elementRect.bottom <= containerRect.bottom;
+
+            if (!scroll) {
+                container.scrollTo({
+                    top: scrollTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
     }
 
     const nextAction = () => {
@@ -181,27 +245,8 @@ function App() {
 
         setConfig();
         playWordAudio();
-
-        const container = document.querySelector('#table-box');
-        const element = document.querySelector('#word-' + config.wordIndex);
-
-        if (container && element) {
-            const containerRect = container.getBoundingClientRect();
-            const elementRect = element.getBoundingClientRect();
-
-            const scrollTop = element.offsetTop - container.offsetTop - (containerRect.height / 2) + (elementRect.height / 2);
-
-            const scroll = elementRect.top >= containerRect.top &&
-            elementRect.bottom <= containerRect.bottom;
-            console.log(elementRect.top, containerRect.top);
-
-            if (!scroll) {
-                container.scrollTo({
-                    top: scrollTop,
-                    behavior: 'smooth'
-                });
-            }
-        }
+        scrollWord();
+        
     }
 
     const nextPage = () => {
@@ -211,6 +256,7 @@ function App() {
         if (config.currentPage > config.wordsData.length) config.currentPage = config.wordsData.length;
         setConfig();
         playWordAudio();
+        scrollWord();
     }
 
     const prevPage = () => {
@@ -220,6 +266,7 @@ function App() {
         if (config.currentPage < 0) config.currentPage = 0;
         setConfig();
         playWordAudio();
+        scrollWord();
     }
 
     const darkMode = () => {
@@ -280,7 +327,7 @@ function App() {
                                                 config.wordIndex = i;
                                                 playWordAudio();
                                                 setConfig();
-                                            }}>{highlightWord(word[0], words, baseWords)}</td>
+                                            }}><span>{highlightWord(word[0], words, baseWords)}</span></td>
                                         <td className='word word1'>[{word[1]}]</td>
                                         <td className='word word2'>{word[2]}</td>
                                     </tr>
