@@ -59,7 +59,7 @@ table {
 }
 
 td {
-    padding: 2px 5px;
+    padding: 2px;
 }
 
 td.word {
@@ -99,11 +99,11 @@ td.word {
 }
 
 .word {
-    font-size: 14px;
+    font-size: 12px;
 }
 
-.word1 {
-    font-size: 12px;
+.word0 {
+    font-size: 14px;
 }
 
 .word2 {
