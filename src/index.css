@@ -1,0 +1,17 @@
+* {
+    user-select: none;
+}
+
+button.MuiButton-root {
+    line-height: 12px;
+    margin-top: 2px;
+}
+
+body, html, #root {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overscroll-behavior: none;
+}

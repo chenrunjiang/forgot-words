@@ -1,0 +1,50 @@
+{
+  "name": "forgot_words",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "homepage": ".",
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@koa/cors": "^5.0.0",
+    "@koa/router": "^12.0.1",
+    "@mui/icons-material": "^5.15.10",
+    "@mui/material": "^5.15.10",
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12",
+    "crypto-js": "^4.2.0",
+    "ioredis": "^5.3.2",
+    "koa": "^2.15.0",
+    "koa-compress": "^5.1.1",
+    "koa-static": "^5.0.0",
+    "lxgw-wenkai-webfont": "^1.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && rm -rf docs && mv build docs",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

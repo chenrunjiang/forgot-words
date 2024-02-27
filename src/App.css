@@ -1,0 +1,150 @@
+@import url('https://fonts.loli.net/css?family=Noto+Sans+Mono');
+@import url('https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css');
+
+.app {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 5px 5px 5px;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+    transition: color 0.2s;
+
+    background: #FAFAFA;
+    color: #212121;
+}
+
+.dark {
+    background: #121212;
+    color: #E0E0E0;
+}
+
+.app * {
+    font-family: "Noto Sans Mono", sans-serif;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header>* {
+    margin: 0 3px;
+}
+
+header .MuiSelect-select  {
+    padding-top: 4px;
+    padding-bottom: 2px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 5px 0;
+    width: 300px;
+    margin: auto;
+}
+
+footer > div {
+    display: flex;
+    align-items: center;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    padding: 2px 5px;
+}
+
+td.word {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.selectd>td {
+    font-weight: bold;
+}
+
+.mask .word1, .mask .word2 {
+    filter: blur(10px);
+}
+
+.selectd td {
+    background: #00000010;
+}
+
+.dark .selectd td {
+    background: #ffffff10;
+}
+
+.table-box {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0 20px 0;
+}
+
+.table-box > div {
+    display: flex;
+}
+
+.word {
+    font-size: 14px;
+}
+
+.word1 {
+    font-size: 12px;
+}
+
+.word2 {
+    font-family: "Noto Sans Mono", 'LXGW WenKai Screen', sans-serif;
+}
+
+button.darkMode {
+    margin-left: 5px;
+}
+
+.root {
+    margin: 10px 0 0 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.highlight-base {
+    color: #3f51b5;
+    background-color: #e3f2fd;
+    padding: 0 1px;
+    border-radius: 3px;
+}
+
+.highlight-word {
+    color: #d81b60;
+    background-color: #e3f2fd;
+    border-radius: 3px;
+    padding: 0 1px;
+}
+
+.highlight-word > .highlight-base {
+    background-color: unset;
+    padding: 0;
+}
+
+.dark .highlight-base {
+    background-color: #263238;
+    color: #7986cb;
+}
+
+.dark .highlight-word {
+    background-color: #263238;
+    color: #ef9a9a;
+}
