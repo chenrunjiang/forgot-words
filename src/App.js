@@ -295,6 +295,8 @@ function App() {
         }
     }
 
+    document.body.onresize = updateApp;
+
     return (
         <ThemeProvider theme={darkTheme}>
             <div className={"app " + (config.dark ? 'dark' : '')}>
@@ -313,7 +315,7 @@ function App() {
                 <div className="word_box" onClick={nextAction}>
                     <p className="root">{root.replace('|', ' ')}</p>
 
-                    <div className="table-box" id="table-box">
+                    <div className="table-box" id="table-box" style={{maxHeight: document.body.clientHeight*0.6}}>
                         <div>
                             <table className={config.wordMask ? 'mask' : ''}>
                                 {data.map((word, i) => (

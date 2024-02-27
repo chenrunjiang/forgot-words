@@ -91,11 +91,11 @@ td.word {
     display: flex;
     overflow-x: auto;
     padding: 10px 0 10px 0;
-    max-height: 500px;
 }
 
 .table-box > div {
     display: flex;
+    margin: auto;
 }
 
 .word {
