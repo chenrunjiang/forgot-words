@@ -191,10 +191,16 @@ function App() {
 
             const scrollTop = element.offsetTop - container.offsetTop - (containerRect.height / 2) + (elementRect.height / 2);
 
-            container.scrollTo({
-                top: scrollTop,
-                behavior: 'smooth'
-            });
+            const scroll = elementRect.top >= containerRect.top &&
+            elementRect.bottom <= containerRect.bottom;
+            console.log(elementRect.top, containerRect.top);
+
+            if (!scroll) {
+                container.scrollTo({
+                    top: scrollTop,
+                    behavior: 'smooth'
+                });
+            }
         }
     }
 
@@ -265,16 +271,16 @@ function App() {
                             <table className={config.wordMask ? 'mask' : ''}>
                                 {data.map((word, i) => (
                                     <tr
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            config.wordIndex = i;
-                                            playWordAudio();
-                                            setConfig();
-                                        }}
                                         key={"wordli" + word[0] + i}
                                         id={"word-" + i}
                                         className={i === config.wordIndex ? 'selectd' : ''}>
-                                        <td className='word word0'>{highlightWord(word[0], words, baseWords)}</td>
+                                        <td className='word word0'
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                config.wordIndex = i;
+                                                playWordAudio();
+                                                setConfig();
+                                            }}>{highlightWord(word[0], words, baseWords)}</td>
                                         <td className='word word1'>[{word[1]}]</td>
                                         <td className='word word2'>{word[2]}</td>
                                     </tr>
