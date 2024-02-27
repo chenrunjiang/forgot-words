@@ -1,4 +1,4 @@
-import { Button, Checkbox, IconButton, ThemeProvider, createTheme } from '@mui/material';
+import { Button, Checkbox, IconButton, ThemeProvider, createTheme, Select, MenuItem } from '@mui/material';
 import { PlayCircle, LightMode, DarkMode } from '@mui/icons-material';
 import crypto from 'crypto-js';
 
@@ -8,6 +8,7 @@ import React from 'react'
 
 const config = Object.assign({
     dark: false,
+    fontSize: 12,
 
     wordsData: [],
 
@@ -246,7 +247,7 @@ function App() {
         setConfig();
         playWordAudio();
         scrollWord();
-        
+
     }
 
     const nextPage = () => {
@@ -314,6 +315,15 @@ function App() {
                         <span>{currentNumber}/{allNumber}</span>
                     </span>
 
+                    <Select
+                        value={config.fontSize}
+                        label="font size"
+                        onChange={(e) => setConfig('fontSize', e.target.value)}>
+                        <MenuItem value={12}>12</MenuItem>
+                        <MenuItem value={14}>14</MenuItem>
+                        <MenuItem value={16}>16</MenuItem>
+                    </Select>
+
                     <IconButton size="small" onClick={darkMode} className="darkMode">
                         {!config.dark ? <DarkMode size="small" /> : <LightMode size="small" />}
                     </IconButton>
@@ -322,11 +332,12 @@ function App() {
                 <div className="word_box" onClick={nextAction}>
                     <p className="root">{root.replace('|', ' ')}</p>
 
-                    <div className="table-box" id="table-box" style={{maxHeight: document.body.clientHeight*0.6}}>
+                    <div className="table-box" id="table-box" style={{ maxHeight: document.body.clientHeight * 0.6 }}>
                         <div>
                             <table className={config.wordMask ? 'mask' : ''}>
                                 {data.map((word, i) => (
                                     <tr
+                                        style={{ fontSize: config.fontSize }}
                                         key={"wordli" + word[0] + i}
                                         id={"word-" + i}
                                         className={i === config.wordIndex ? 'selectd' : ''}>
