@@ -169,28 +169,33 @@ function App() {
     }
 
     const nextAction = () => {
-        // if (config.wordIndex === -1) {
-        //     config.wordIndex = 0;
-        // } else {
-        //     config.wordIndex++;
-        // }
+        if (config.wordIndex === -1) {
+            config.wordIndex = 0;
+        } else {
+            config.wordIndex++;
+        }
 
-        // if (!wordList[config.wordIndex]) {
-        //     const oldData = config.wordsData[config.wordsName].concat([]);
-        //     const index1 = Array.from({ length: endIndex - startIndex }, (v, k) => k + startIndex);
-        //     const index2 = index1.concat([]).sort(() => Math.random() - 0.5);
+        if (!wordsData[currentPage].data[config.wordIndex]) {
+            config.wordIndex = 0;
+        }
 
-        //     for (let i = 0; i < index1.length; i++) {
-        //         const i1 = index1[i];
-        //         const i2 = index2[i];
-        //         config.wordsData[config.wordsName][i1] = oldData[i2];
-        //     }
+        setConfig();
+        playWordAudio();
 
-        //     config.wordIndex = 0;
-        // }
+        const container = document.querySelector('#table-box');
+        const element = document.querySelector('#word-' + config.wordIndex);
 
-        // setConfig();
-        // playWordAudio();
+        if (container && element) {
+            const containerRect = container.getBoundingClientRect();
+            const elementRect = element.getBoundingClientRect();
+
+            const scrollTop = element.offsetTop - container.offsetTop - (containerRect.height / 2) + (elementRect.height / 2);
+
+            container.scrollTo({
+                top: scrollTop,
+                behavior: 'smooth'
+            });
+        }
     }
 
     const nextPage = () => {
@@ -206,7 +211,7 @@ function App() {
         config.currentPage--;
         config.wordIndex = 0;
         config.wordMask = false;
-        if (config.currentPage < 1) config.currentPage = 1;
+        if (config.currentPage < 0) config.currentPage = 0;
         setConfig();
         playWordAudio();
     }
@@ -221,6 +226,22 @@ function App() {
         },
     });
 
+    let allNumber = 0, currentNumber = config.wordIndex;
+    let skipAdd = false;
+
+    for (const words of config.wordsData) {
+        allNumber += words.data.length;
+
+
+        if (words.root === root) {
+            skipAdd = true;
+        }
+
+        if (!skipAdd) {
+            currentNumber += words.data.length
+        }
+    }
+
     return (
         <ThemeProvider theme={darkTheme}>
             <div className={"app " + (config.dark ? 'dark' : '')}>
@@ -228,7 +249,7 @@ function App() {
                     <Button size="small" onClick={handle_reset}>reset</Button>
 
                     <span >
-                        <span>{0}/{0}</span>
+                        <span>{currentNumber}/{allNumber}</span>
                     </span>
 
                     <IconButton size="small" onClick={darkMode} className="darkMode">
@@ -236,28 +257,30 @@ function App() {
                     </IconButton>
                 </header>
 
-                <p className="root">{root.replace('|', ' ')}</p>
+                <div className="word_box" onClick={nextAction}>
+                    <p className="root">{root.replace('|', ' ')}</p>
 
-                <div className="table-box">
-
-                    <div onClick={nextAction} style={{ width: '100%' }}>
-                        <table className={config.wordMask ? 'mask' : ''}>
-                            {data.map((word, i) => (
-                                <tr
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        config.wordIndex = i;
-                                        playWordAudio();
-                                        setConfig();
-                                    }}
-                                    key={"wordli" + word[0]}
-                                    className={i === config.wordIndex ? 'selectd' : ''}>
-                                    <td className='word word0'>{highlightWord(word[0], words, baseWords)}</td>
-                                    <td className='word word1'>[{word[1]}]</td>
-                                    <td className='word word2'>{word[2]}</td>
-                                </tr>
-                            ))}
-                        </table>
+                    <div className="table-box" id="table-box">
+                        <div>
+                            <table className={config.wordMask ? 'mask' : ''}>
+                                {data.map((word, i) => (
+                                    <tr
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            config.wordIndex = i;
+                                            playWordAudio();
+                                            setConfig();
+                                        }}
+                                        key={"wordli" + word[0] + i}
+                                        id={"word-" + i}
+                                        className={i === config.wordIndex ? 'selectd' : ''}>
+                                        <td className='word word0'>{highlightWord(word[0], words, baseWords)}</td>
+                                        <td className='word word1'>[{word[1]}]</td>
+                                        <td className='word word2'>{word[2]}</td>
+                                    </tr>
+                                ))}
+                            </table>
+                        </div>
                     </div>
                 </div>
 

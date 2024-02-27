@@ -59,7 +59,7 @@ table {
 }
 
 td {
-    padding: 2px;
+    padding: 2px 4px;
 }
 
 td.word {
@@ -78,20 +78,20 @@ td.word {
 }
 
 .selectd td {
-    background: #00000010;
+    background: #0000001f;
+    border-radius: 2px;
 }
 
 .dark .selectd td {
-    background: #ffffff10;
+    background: #ffffff26;
 }
 
 .table-box {
     width: 100%;
-    height: 100%;
-    flex-grow: 1;
     display: flex;
     overflow-x: auto;
-    padding: 10px 0 20px 0;
+    padding: 10px 0 10px 0;
+    max-height: 500px;
 }
 
 .table-box > div {
@@ -115,7 +115,7 @@ button.darkMode {
 }
 
 .root {
-    margin: 10px 0 0 0;
+    margin: 0 0 15px 0;
     text-align: center;
     font-weight: bold;
 }
@@ -141,10 +141,17 @@ button.darkMode {
 
 .dark .highlight-base {
     background-color: #263238;
-    color: #7986cb;
+    color: #5e7cec;
 }
 
 .dark .highlight-word {
     background-color: #263238;
-    color: #ef9a9a;
+    color: #d75454;
+}
+
+.word_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
