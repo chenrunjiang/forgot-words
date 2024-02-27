@@ -279,6 +279,13 @@ function App() {
         },
     });
 
+    // document.querySelector("meta[name=theme-color]")
+    const metaThemeColorElem = document.querySelector("meta[name=theme-color]");
+
+    if (metaThemeColorElem) {
+        metaThemeColorElem.setAttribute("content", config.dark ? '#121212' : '#FAFAFA');
+    }
+
     let allNumber = 0, currentNumber = config.wordIndex;
     let skipAdd = false;
 
