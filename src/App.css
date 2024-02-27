@@ -111,7 +111,7 @@ button.darkMode {
 }
 
 .root {
-    margin: 0 0 15px 0;
+    margin: 10px 0;
     text-align: center;
     font-weight: bold;
 }
@@ -156,4 +156,5 @@ button.darkMode {
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    max-height: calc(100% - 80px);
 }
