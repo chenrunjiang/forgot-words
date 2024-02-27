@@ -13,7 +13,7 @@ victoriously,vɪk'tɔːriəsli,adv.获胜地；凯旋归来地
 Victorian,vɪk'tɔːriən,adj.维多利亚女王时代的;n.维多利亚时代
 Victorian-era,vik'tɔ:riən-'ɪərə,n.维多利亚时代
 Victorian-style,vik'tɔ:riən-staɪl,n.维多利亚风格
-late-Victorian,[leɪt-vik'tɔ:riən,adj.维多利亚晚期
+late-Victorian,leɪt-vik'tɔ:riən,adj.维多利亚晚期
 neo-Victorian,'ni:əu-vik'tɔ:riən,adj.新维多利亚的
 victim,'vɪktɪm,n.受害者
 victimless,'vɪktɪmləs,adj.不侵害他人的，无受害人的（犯罪行为等）
@@ -128,7 +128,7 @@ high-performance,haɪ'pɚ'fɔrməns,adj.高性能的；高效能的
 high-performing,haɪ-pə'fɔːmɪŋ,n.高绩效；高性能
 performance-enhancing,pə'fɔːm(ə)ns-ɪn'hɑːnsɪŋ,adj.增强性能的
 performance-based,pə'fɔːmənsb'eɪst,adj.绩效为基础的
-best-performing,[best-pə'fɔːmɪŋ,n.表现最好的
+best-performing,best-pə'fɔːmɪŋ,n.表现最好的
 performance-oriented,pə'fɔːm(ə)ns-'orɪɛntɪd,以绩效为导向；绩效导向；绩效型
 performance-related,pə'fɔːm(ə)ns-rɪ'leɪtɪd,adj.性能相关的；绩效相关的
 pay-for-performance,peɪ-fɔ:(r)-pə'fɔːm(ə)ns,n.绩效薪酬
@@ -183,7 +183,7 @@ reforming,rɪ'fɔːmɪŋ,n.重整；改进；变换
 reformulate,ˌriː'fɔːmjuleɪt,vt.再用形式表示
 reformation,ˌrefə'meɪʃn,n.革新；改善
 reform-minded,rɪ'fɔːmm'aɪndɪd,adj.决心改革的
-counter-reformation,['kauntə-refə'meɪʃ(ə)n,n.反宗教改革
+counter-reformation,'kauntə-refə'meɪʃ(ə)n,n.反宗教改革
 pro-reform,p'rəʊrɪf'ɔːm,adj.支持改革的；尤指政治上
 unreformed,ˌʌnrɪ'fɔːmd,adj.未经宗教改革的
 reformism,rɪ'fɔːmɪzm,n.改良主义；改革主义
@@ -248,7 +248,7 @@ instruction,ɪn'strʌkʃn,n.（常作复数）指示；说明
 instructive,ɪn'strʌktɪv,adj.有益的；教育性的
 instructional,ɪn'strʌkʃənl,adj.教学的；指导的，教育的
 instructionally,ɪn'strʌkʃənəli,adv.教学性地，指导性地
-self-instruction,[self-ɪn'strʌkʃ(ə)n,n.自学；自我指导
+self-instruction,self-ɪn'strʌkʃ(ə)n,n.自学；自我指导
 self-instructional,'selfɪnstr'ʌkʃnəl,adj.自学的；适于自学的；用于自学的
 infrastructure,'ɪnfrəstrʌktʃə(r),n.基础设施；公共建设；下部构造
 infrastructural,ˌɪnfrə'strʌktʃərəl,adj.基础结构的；构造基底的
@@ -1607,7 +1607,6 @@ self-evident,self 'evɪdənt,adj.不言而喻的；不证自明的
 self-evidently,self 'evɪdənt,adv.不言而喻地
 evidence-based,'evɪd(ə)ns-beɪst,adj.基于证据的
 video,'vɪdiəʊ,n.磁带录像；录像磁带；录像机，电视；（指方法）录像;vt.录像；制作…的录像
-adj.电视的；视频的；影像的；用录像磁带,录像带,的
 videophone,'vɪdiəʊfəʊn,n.可视电话，电视电话，视像电话
 videocast,vɪdiːəʊ'kɑːst,n.电视广播
 videotape,'vɪdiəʊteɪp,n.录像带;vt.将…录到录像带上
@@ -2508,7 +2507,6 @@ racetrack,'reɪstræk,n.跑道；赛马场
 backtrack,'bæktræk,vi.[计]回溯；由原路返回；放弃;vt.追踪；循迹调查
 backtracking,'bæktrækɪŋ,n.[计]回溯；回溯法
 sidetrack,'saɪdtræk,vt.将（火车）[建]转到侧线；转变（话题）;n.（铁路）侧线；次要地位
-vi.,建,转到侧线；转变话题
 tenure-track,'tenjuərtr'æk,adj.终身职位的
 trackside,'træksaɪd,n.
 off-track,'ɔːftr'æk,adj.偏远的；场外下注的；正常铁道业务以外的;n.偏离磁道
@@ -2778,7 +2776,6 @@ emancipated,ɪ'mænsə,petɪd,adj.被解放的
 emancipatory,ɪ'mænsɪpeɪtərɪ,adj.解放的；有助于解放的
 emancipator,ɪ'mænsɪpeɪtə,n.释放者；解放者
 maneuver,mə'nuːvə,n.[军]机动；演习；策略；调遣;vi.[军]机动；演习；调遣；用计谋
-vt.,军,机动；演习；用计；调遣
 maneuvering,mə'nuːvərɪŋ,v.[军]机动；操纵；演习;n.[军]机动
 maneuverable,mə'nuːvərəbəl,adj.有机动性的；容易操作的；可调动的
 maneuverability,məˌnuːvərə'bɪlɪtɪ,n.可操作性；[航][车辆][船]机动性
@@ -3735,7 +3732,6 @@ maleficent,mə'lefɪsnt,adj.有害的；犯罪的；做坏事的
 
 ton,tun|声 ,音调
 tune,tjuːn,n.曲调；和谐；心情;vt.调整；使一致；为…调音
-vi.,电子,[通信]调谐；协调
 tuning,'tjuːnɪŋ,n.[电子][通信]调谐；调音，起弦；协调一致；起音，定音
 tuned,tjuːnd,adj.经调谐的；谱好曲的；调好台的
 tuner,'tjuːnə(r),n.[电子]调谐器；调音师
@@ -5462,7 +5458,6 @@ restoring,rɪs'tɔːrɪŋ,adj.恢复的
 restorative,rɪ'stɔːrətɪv,n.[药]恢复药，滋补剂;adj.滋补的，有助于复元的；恢复健康的
 restorer,rɪ'stɔːrə(r),n.修补者；[计]复位器；[计]恢复设备；修建者
 restorationist,restə'reiʃənist,n.;1.众生复位说信徒;2.(旧建筑物等的)修复者
-adj.,R-,(英国)王政复辟时期的；带有王政复辟时期色彩的
 transistor,træn'zɪstə(r),n.晶体管（收音机）
 test,test,n.试验；检验;vt.试验；测试;vi.试验；测试
 testing,'testɪŋ,n.[试验]测试;adj.试验的；棘手的
@@ -5700,7 +5695,7 @@ institutionalization,ˌɪnstɪ'tjuːʃənəlaɪz,n.制度化；体制化
 institutionally,ˌɪnstɪ'tjuːʃənl,adv.从制度上
 institutionalism,ɪnstɪt'juːʃənəlɪzəm,n.设立；制式主义
 reinstitution,'riːɪnstɪ'tjuːʃən,n.再建立，重新建立
-anti-institutional,['æntɪ-ɪnstɪ'tjuːʃ(ə)n(ə)l,adj.反制度的
+anti-institutional,'æntɪ-ɪnstɪ'tjuːʃ(ə)n(ə)l,adj.反制度的
 obstacle,'ɒbstəkl,n.障碍；干扰；妨害物
 obstetric,əb'stetrɪk,adj.产科的；生产的，分娩的
 obstetrics,əb'stetrɪks,n.产科学，助产术
@@ -7463,7 +7458,6 @@ inescapable,ˌɪnɪ'skeɪpəbl,adj.不可避免的；逃脱不了的
 inescapably,ˌɪnɪ'skeɪpəbli,adv.逃不掉地
 escapade,ˌeskə'peɪd,n.越轨行为；恶作剧
 precipitate,prɪ'sɪpɪteɪt,n.[化学]沉淀物;vt.使沉淀；促成；猛抛；使陷入
-vi.,化学,沉淀；猛地落下；冷凝成为雨或雪等
 precipitation,prɪˌsɪpɪ'teɪʃn,n.[化学]沉淀，[化学]沉淀物；降水；冰雹；坠落；鲁莽
 precipitator,prɪ'sɪpɪteɪtə,n.[化学]沉淀剂，[矿业]沉淀器；催促的人
 precipitating,prɪ'sɪpɪteɪtɪŋ,adj.起沉淀作用的；急落的；猛冲的
@@ -7895,7 +7889,6 @@ extermination,ɪkˌstɜːmɪ'neɪʃn,n.消灭；根绝
 exterminator,eks'tɜːmɪˌneɪtə,n.根除者；（美）灭鼠药；（美）职业的消灭害虫者
 exterminating,ɪk'stɜːmɪneɪt,v.消灭，根绝（现在分词）
 determine,dɪ'tɜːmɪn,v.（使）下决心，（使）做出决定;vt.决定，确定；判定，判决；限定
-vi.确定；决定；判决，终止；,主用于法律,了结，终止，结束
 determiner,dɪ'tɜːmɪnə(r),n.[语]限定词；决定因素
 determining,dɪ'tɜːmɪnɪŋ,n.决定；测定
 determined,dɪ'tɜːmɪnd,adj.决定了的；坚决的;v.决定；断定（determine的过去分词）
@@ -9832,7 +9825,7 @@ frontality,frʌn'tælɪtɪ,n.（绘画及雕塑中对人物、风景等的）正
 prefrontal,priː'frʌntəl,adj.[解剖]前额的；额叶前部的;n.[解剖]额前骨
 frontage,'frʌntɪdʒ,n.前方；房子的正面；临街
 frontman,'frʌntmæn,n.主唱；出面人物；是名义上的负责人，但又缺少权威
-frontline,['frʌntlɑɪn],n.前线；锋线（包括大前锋，小前锋，中锋）
+frontline,'frʌntlɑɪn,n.前线；锋线（包括大前锋，小前锋，中锋）
 frontcourt,'frʌnt'kɔːt,n.前场
 frontside,'frʌnt-saɪd,n.正视图；进料侧
 frontispiece,'frʌntɪspiːs,n.卷头插画；标题页;vt.为书加卷首插图；把…画入书的卷首插图
@@ -10071,7 +10064,6 @@ discount,'dɪskaʊnt,n.折扣；贴现率;vi.贴现；打折扣出售商品
 discounter,'dɪskaʊntə(r),n.折扣商店；廉价商店
 discounted,'dɪskaʊnt,adj.已贴现的；已折扣的;v.打折扣（过去分词）；不重视
 discounting,'dɪskaʊntɪŋ,vt.[金融]贴现；[贸易]折扣；折现；计算现值（现在分词）
-vi.,金融,贴现；打折扣（现在分词）
 account,ə'kaʊnt,n.账户；解释；账目，账单；理由；描述;vi.解释；导致；报账
 accountancy,ə'kaʊntənsi,n.会计工作；会计学；会计师之职
 accountant,ə'kaʊntənt,n.会计师；会计人员
@@ -12671,7 +12663,6 @@ ejaculatory,ɪ'dʒækjʊlətərɪ,adj.突然喊叫的；感叹的；射出性的
 adjacent,ə'dʒeɪsnt,adj.邻近的，毗连的
 adjacency,ə'dʒeɪsnsɪ,n.毗邻；四周；邻接物
 jet,dʒet,n.喷射，喷嘴；喷气式飞机；黑玉;adj.墨黑的;vt.射出
-vi.射出；,航,乘喷气式飞机
 jetty,'dʒeti,n.码头；防波堤;adj.乌黑发亮的，煤玉似的;vi.伸出
 jetsam,'dʒetsəm,n.漂流到海岸的货物；投弃货物；[水运]船舶遇险时投弃的货物
 jettison,'dʒetɪsn,n.投弃；投弃货物;vt.投弃（船舶遇难时投弃货物以为减轻负载）
